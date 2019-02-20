@@ -1,0 +1,41 @@
+header {
+  height: 100px;
+  border-bottom: 10px solid $lighter;
+  .logo-wrap {
+    text-align: right;
+    margin: 12px 0;
+    // border-right: 1px solid $yell;
+    .logo {
+      width: 60px;
+      padding: 8px 0;
+      margin-right: 18px;
+    }
+  }
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      padding: 0 18px;
+      .nav-link {
+        display: block;
+        height: 84px;
+        padding-top: 60px;
+        color: $yell;
+        &::after {
+          display: block;
+          position: relative;
+          top: 6px;
+          width: 0%;
+          height: 10px;
+          margin: 0 auto;
+          content: "";
+          background: $yell;
+          transition: .3s ease;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
