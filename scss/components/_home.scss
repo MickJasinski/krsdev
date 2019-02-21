@@ -1,0 +1,82 @@
+#home {
+  padding-top: 110px;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+// ___main wrapper
+#HomeArtworkWrap {
+  position: relative;
+  width: 993px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  width: 60%;
+  overflow: auto;
+}
+
+
+// ___image
+#HomeArtwork {
+  display: block;
+  position: relative;
+  top: 2.5vw;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+// ___banner text
+#BannerTxt {
+  position: absolute;
+  top: 2.5vw;
+  color: $yell;
+  font-size: 2vw;
+  font-family: $fat;
+  text-transform: uppercase;
+  z-index: 1000;
+}
+
+
+// ___animated words
+#AnimateTxt {
+  color: white;
+  font-weight: 900;
+  letter-spacing: .3vw;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  z-index: 1000;
+  top: 9.4vw;
+  padding-left: 23.5vw;
+  font-size: 1.8vw;
+  width: 40vw;
+}
+
+
+//////// Animation
+.slidingVertical span{
+	animation: topToBottom 7.5s linear infinite 0s;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute !important;
+}
+.slidingVertical span:nth-child(2){
+	animation-delay: 2.5s;
+}
+.slidingVertical span:nth-child(3){
+	animation-delay: 5s;
+}
+
+/*topToBottom Animation*/
+@keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; transform: translateY(-2.4vw); }
+	10% { opacity: 1; transform: translateY(0px); }
+	25% { opacity: 1; transform: translateY(0px); }
+	30% { opacity: 0; transform: translateY(2.4vw); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}

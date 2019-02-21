@@ -15,3 +15,8 @@
 .lighter-bg {
   background: $lighter;
 }
+
+//////// Gradients
+.dark-lite-blue {
+  background-image: linear-gradient($dark, $lighter) !important;
+}

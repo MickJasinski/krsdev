@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Abel|Righteous&subset=latin-ext");
 *,
 p {
   margin: 0;
@@ -15,35 +16,123 @@ p {
 .lighter-bg {
   background: #345b75; }
 
+.dark-lite-blue {
+  background-image: linear-gradient(#213644, #345b75) !important; }
+
+.skinny {
+  font-family: 'Abel', sans-serif; }
+
+.fat {
+  font-family: 'Righteous', cursive; }
+
 header {
+  position: absolute;
   height: 100px;
-  border-bottom: 10px solid #345b75; }
+  z-index: 1000; }
   header .logo-wrap {
-    text-align: right;
-    margin: 12px 0; }
+    text-align: center;
+    border-bottom: 1px solid #FCC470; }
     header .logo-wrap .logo {
       width: 60px;
-      padding: 8px 0;
-      margin-right: 18px; }
-  header ul {
-    list-style: none; }
-    header ul li {
-      display: inline-block;
-      padding: 0 18px; }
-      header ul li .nav-link {
-        display: block;
-        height: 84px;
-        padding-top: 60px;
-        color: #FCC470; }
-        header ul li .nav-link::after {
+      padding: 8px 0 0 0; }
+  header .screen-nav {
+    text-align: center; }
+    header .screen-nav ul {
+      list-style: none; }
+      header .screen-nav ul li {
+        display: inline-block;
+        padding: 0 18px; }
+        header .screen-nav ul li .nav-link {
           display: block;
-          position: relative;
-          top: 6px;
-          width: 0%;
-          height: 10px;
-          margin: 0 auto;
-          content: "";
-          background: #FCC470;
-          transition: .3s ease; }
-        header ul li .nav-link:hover::after {
-          width: 100%; }
+          height: 20px;
+          color: #FCC470;
+          text-transform: uppercase;
+          letter-spacing: 2px; }
+          header .screen-nav ul li .nav-link::after {
+            display: block;
+            position: relative;
+            top: 2px;
+            width: 0%;
+            height: 1px;
+            margin: 0 auto;
+            content: "";
+            background: #FCC470;
+            transition: .3s ease; }
+          header .screen-nav ul li .nav-link:hover::after {
+            width: 100%; }
+
+#home {
+  padding-top: 110px;
+  height: 100vh;
+  position: relative;
+  z-index: 1; }
+
+#HomeArtworkWrap {
+  position: relative;
+  width: 993px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  width: 60%;
+  overflow: auto; }
+
+#HomeArtwork {
+  display: block;
+  position: relative;
+  top: 2.5vw;
+  width: 100%;
+  overflow: hidden; }
+
+#BannerTxt {
+  position: absolute;
+  top: 2.5vw;
+  color: #FCC470;
+  font-size: 2vw;
+  font-family: "Righteous", cursive;
+  text-transform: uppercase;
+  z-index: 1000; }
+
+#AnimateTxt {
+  color: white;
+  font-weight: 900;
+  letter-spacing: .3vw;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  z-index: 1000;
+  top: 9.4vw;
+  padding-left: 23.5vw;
+  font-size: 1.8vw;
+  width: 40vw; }
+
+.slidingVertical span {
+  animation: topToBottom 7.5s linear infinite 0s;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute !important; }
+
+.slidingVertical span:nth-child(2) {
+  animation-delay: 2.5s; }
+
+.slidingVertical span:nth-child(3) {
+  animation-delay: 5s; }
+
+/*topToBottom Animation*/
+@keyframes topToBottom {
+  0% {
+    opacity: 0; }
+  5% {
+    opacity: 0;
+    transform: translateY(-2.4vw); }
+  10% {
+    opacity: 1;
+    transform: translateY(0px); }
+  25% {
+    opacity: 1;
+    transform: translateY(0px); }
+  30% {
+    opacity: 0;
+    transform: translateY(2.4vw); }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }

@@ -11,13 +11,13 @@
 </head>
 <body>
   <!-- End of head -->
-<header class="dark-bg container-fluid">
+<header class="container-fluid">
   <div class="row">
-    <div class="col-6 logo-wrap">
+    <div class="logo-wrap col-12">
       <img class="logo" src="images/logoServ.svg" alt="Logo - Serwis Komputerowy Bedford">       
     </div>
-    <div class="col-6">
-      <ul>
+    <div class="screen-nav col-12">
+      <ul class="skinny">
         <li><a class="nav-link" href="/">Start</a></li>
         <li><a class="nav-link" href="/o-nas">O nas</a></li>
         <li><a class="nav-link" href="/kontakt">Kontakt</a></li>
