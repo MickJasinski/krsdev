@@ -6,7 +6,7 @@ header {
     text-align: center;
     border-bottom: 1px solid $yell;
     .logo {
-      width: 60px;
+      width: 200px;
       padding: 8px 0 0 0;
     }
   }
@@ -22,7 +22,7 @@ header {
           height: 20px;
           color: $yell;
           text-transform: uppercase;
-          letter-spacing: 2px;
+          letter-spacing: 8px;
           &::after {
             display: block;
             position: relative;

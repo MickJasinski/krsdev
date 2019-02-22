@@ -33,7 +33,7 @@ header {
     text-align: center;
     border-bottom: 1px solid #FCC470; }
     header .logo-wrap .logo {
-      width: 60px;
+      width: 200px;
       padding: 8px 0 0 0; }
   header .screen-nav {
     text-align: center; }
@@ -47,7 +47,7 @@ header {
           height: 20px;
           color: #FCC470;
           text-transform: uppercase;
-          letter-spacing: 2px; }
+          letter-spacing: 8px; }
           header .screen-nav ul li .nav-link::after {
             display: block;
             position: relative;
@@ -66,54 +66,61 @@ header {
   height: 100vh;
   position: relative;
   z-index: 1; }
+  #home .callme {
+    text-align: right; }
+  #home .artwork {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 110px); }
 
 #HomeArtworkWrap {
   position: relative;
   width: 993px;
   margin: 0 auto;
   padding-bottom: 60px;
-  width: 60%;
-  overflow: auto; }
-
-#HomeArtwork {
-  display: block;
-  position: relative;
-  top: 2.5vw;
   width: 100%;
-  overflow: hidden; }
+  text-align: center;
+  overflow: auto; }
 
 #BannerTxt {
   position: absolute;
-  top: 2.5vw;
+  top: 120px;
   color: #FCC470;
   font-size: 2vw;
   font-family: "Righteous", cursive;
   text-transform: uppercase;
   z-index: 1000; }
 
-#AnimateTxt {
+.animated-text {
   color: white;
   font-weight: 900;
   letter-spacing: .3vw;
+  text-align: center;
   text-transform: uppercase;
   position: relative;
-  text-align: center;
   z-index: 1000;
-  top: 9.4vw;
-  padding-left: 23.5vw;
-  font-size: 1.8vw;
-  width: 40vw; }
+  top: 114px;
+  left: 18vw;
+  font-size: 1.6rem; }
 
-.slidingVertical span {
+#HomeArtwork {
+  display: block;
+  position: relative;
+  width: 340px;
+  margin: 30px auto;
+  overflow: hidden; }
+
+.sliding-vertical span {
   animation: topToBottom 7.5s linear infinite 0s;
   opacity: 0;
   overflow: hidden;
   position: absolute !important; }
 
-.slidingVertical span:nth-child(2) {
+.sliding-vertical span:nth-child(2) {
   animation-delay: 2.5s; }
 
-.slidingVertical span:nth-child(3) {
+.sliding-vertical span:nth-child(3) {
   animation-delay: 5s; }
 
 /*topToBottom Animation*/
