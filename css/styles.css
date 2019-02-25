@@ -62,66 +62,73 @@ header {
             width: 100%; }
 
 #home {
-  padding-top: 110px;
-  height: 100vh;
   position: relative;
+  height: 100vh;
+  padding: 0;
+  background-image: url("../../images/compFix.jpg") !important;
+  filter: grayscale(100%);
   z-index: 1; }
+  #home .background {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#213644, #345b75);
+    background-blend-mode: multiply;
+    opacity: .94; }
+  #home .row-reset {
+    margin-left: 0;
+    margin-right: 0; }
   #home .callme {
     text-align: right; }
   #home .artwork {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 110px); }
+    height: calc(100vh - 110px);
+    margin-top: 110px; }
+    #home .artwork .artwork-wrap {
+      position: relative;
+      width: 220px; }
+      #home .artwork .artwork-wrap #banner-text {
+        position: absolute;
+        width: 100%;
+        top: -48px;
+        text-align: center;
+        color: #FCC470;
+        font-size: 1.4rem;
+        font-family: "Righteous", cursive;
+        text-transform: uppercase;
+        z-index: 1000; }
+      #home .artwork .artwork-wrap .animated-text {
+        position: absolute;
+        top: 56px;
+        left: 18px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 1rem;
+        font-weight: 900;
+        letter-spacing: .2vw;
+        text-transform: uppercase;
+        z-index: 1000; }
+      #home .artwork .artwork-wrap #HomeArtwork {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden; }
 
-#HomeArtworkWrap {
-  position: relative;
-  width: 993px;
-  margin: 0 auto;
-  padding-bottom: 60px;
-  width: 100%;
-  text-align: center;
-  overflow: auto; }
-
-#BannerTxt {
-  position: absolute;
-  top: 120px;
-  color: #FCC470;
-  font-size: 2vw;
-  font-family: "Righteous", cursive;
-  text-transform: uppercase;
-  z-index: 1000; }
-
-.animated-text {
-  color: white;
-  font-weight: 900;
-  letter-spacing: .3vw;
-  text-align: center;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 1000;
-  top: 114px;
-  left: 18vw;
-  font-size: 1.6rem; }
-
-#HomeArtwork {
-  display: block;
-  position: relative;
-  width: 340px;
-  margin: 30px auto;
-  overflow: hidden; }
-
-.sliding-vertical span {
-  animation: topToBottom 7.5s linear infinite 0s;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute !important; }
-
-.sliding-vertical span:nth-child(2) {
-  animation-delay: 2.5s; }
-
-.sliding-vertical span:nth-child(3) {
-  animation-delay: 5s; }
+.sliding-vertical {
+  display: block; }
+  .sliding-vertical span {
+    animation: topToBottom 7.5s linear infinite 0s;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute !important; }
+  .sliding-vertical span:nth-child(2) {
+    animation-delay: 2.5s; }
+  .sliding-vertical span:nth-child(3) {
+    animation-delay: 5s; }
 
 /*topToBottom Animation*/
 @keyframes topToBottom {
@@ -129,7 +136,7 @@ header {
     opacity: 0; }
   5% {
     opacity: 0;
-    transform: translateY(-2.4vw); }
+    transform: translateY(-24px); }
   10% {
     opacity: 1;
     transform: translateY(0px); }
@@ -138,8 +145,47 @@ header {
     transform: translateY(0px); }
   30% {
     opacity: 0;
-    transform: translateY(2.4vw); }
+    transform: translateY(24px); }
   80% {
     opacity: 0; }
   100% {
     opacity: 0; } }
+
+.callme {
+  position: absolute;
+  bottom: 60px;
+  left: calc(50% - 165px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; }
+  .callme button {
+    position: relative;
+    top: 0;
+    width: 330px;
+    height: 56px;
+    font-size: 1.6rem;
+    font-family: "Righteous", cursive;
+    text-transform: uppercase;
+    color: #FCC470;
+    background: #345b75;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: .4s ease;
+    cursor: pointer; }
+    .callme button:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0px;
+      width: 330px;
+      height: 56px;
+      border-radius: 12px;
+      box-shadow: 0 15px 100px black;
+      transition: .4s ease;
+      opacity: 0; }
+    .callme button:hover {
+      top: -8px; }
+      .callme button:hover:after {
+        opacity: .3; }

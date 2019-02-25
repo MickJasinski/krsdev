@@ -1,6 +1,7 @@
 {
-  "workbench.colorCustomizations": {
-    "editor.selectionBackground": "#633146",
-    "terminal.foreground": "#42af4b",
-  }
+	"workbench.colorCustomizations": {
+    "focusBorder": "#a31e55",
+    "editor.selectionBackground": "#79355a",
+    "terminal.foreground": "#99bd37",
+	}
 }
