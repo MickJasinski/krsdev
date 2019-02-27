@@ -3,8 +3,8 @@
   position: relative;
   height: 100vh;
   padding: 0;
-  background-image: url('../../images/compFix.jpg') !important;
-  filter: grayscale(100%);
+  // background-image: url('../../images/compFix.jpg') !important;
+  // filter: grayscale(100%);
   z-index: 1;
   .background {
     position: absolute;
@@ -18,15 +18,12 @@
     margin-left: 0;
     margin-right: 0;
   }
-  .callme {
-    text-align:right;
-  }
   .artwork {
     display: flex;
     justify-content: center;
     align-items: center;
     height: calc(100vh - 110px);
-    margin-top: 110px;
+    margin-top: 90px;
     .artwork-wrap {
       position: relative;
       width: 220px;
@@ -83,18 +80,6 @@
   }
 }
 
-/*topToBottom Animation*/
-@keyframes topToBottom{
-	0% { opacity: 0; }
-	5% { opacity: 0; transform: translateY(-24px); }
-	10% { opacity: 1; transform: translateY(0px); }
-	25% { opacity: 1; transform: translateY(0px); }
-	30% { opacity: 0; transform: translateY(24px); }
-	80% { opacity: 0; }
-	100% { opacity: 0; }
-}
-
-
 //////// Hero - connect side
 .callme {
   position: absolute;
@@ -117,7 +102,7 @@
     border: none;
     border-radius: 12px;
     box-shadow: 0 15px 30px rgba(0,0,0,.3);
-    transition: .4s ease;
+    transition: .25s ease;
     cursor: pointer;
     &:after {
       content: "";
@@ -132,9 +117,56 @@
       opacity: 0;
     }
     &:hover {
-      top: -8px;
+      top: -5px;
       &:after {
         opacity: .3;
+      }
+    }
+  }
+}
+
+#offer {
+  min-height: 100vh;
+  background: $lighten;
+  box-shadow: 0 0 600px rgba(53, 78, 92, 0.8) inset;
+  .topic-img-wrp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    .topic-img  {
+      width: 200px;
+    }
+  }
+  .accordion-wrap {
+    padding: 80px 30px;
+  }.card {
+    background: none;
+    color: $dark;
+    border: none;
+    .card-header {
+      padding: 0;
+      border: none;
+      button {
+        width: 100%;
+        margin-bottom: 2px;
+        color: $lighten;
+        font-family: $fat;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: $lighter;
+        padding: 20px;
+        transition: .8s ease-out;
+      }
+      button[aria-expanded="true"] {
+        color: $yell;
+      }
+    }
+    .card-body {
+      padding: 20px 40px;
+      ul {
+        padding-left: 40px;
       }
     }
   }

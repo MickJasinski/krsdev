@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Abel|Righteous&subset=latin-ext");
-*,
-p {
+*, p, h1, h2, h3, h4, h5, h6, a, ul, li {
   margin: 0;
   padding: 0; }
 
@@ -24,6 +23,27 @@ p {
 
 .fat {
   font-family: 'Righteous', cursive; }
+
+/*topToBottom Animation*/
+@keyframes topToBottom {
+  0% {
+    opacity: 0; }
+  5% {
+    opacity: 0;
+    transform: translateY(-18px); }
+  10% {
+    opacity: 1;
+    transform: translateY(0px); }
+  25% {
+    opacity: 1;
+    transform: translateY(0px); }
+  30% {
+    opacity: 0;
+    transform: translateY(18px); }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
 
 header {
   position: absolute;
@@ -65,8 +85,6 @@ header {
   position: relative;
   height: 100vh;
   padding: 0;
-  background-image: url("../../images/compFix.jpg") !important;
-  filter: grayscale(100%);
   z-index: 1; }
   #home .background {
     position: absolute;
@@ -78,14 +96,12 @@ header {
   #home .row-reset {
     margin-left: 0;
     margin-right: 0; }
-  #home .callme {
-    text-align: right; }
   #home .artwork {
     display: flex;
     justify-content: center;
     align-items: center;
     height: calc(100vh - 110px);
-    margin-top: 110px; }
+    margin-top: 90px; }
     #home .artwork .artwork-wrap {
       position: relative;
       width: 220px; }
@@ -130,27 +146,6 @@ header {
   .sliding-vertical span:nth-child(3) {
     animation-delay: 5s; }
 
-/*topToBottom Animation*/
-@keyframes topToBottom {
-  0% {
-    opacity: 0; }
-  5% {
-    opacity: 0;
-    transform: translateY(-24px); }
-  10% {
-    opacity: 1;
-    transform: translateY(0px); }
-  25% {
-    opacity: 1;
-    transform: translateY(0px); }
-  30% {
-    opacity: 0;
-    transform: translateY(24px); }
-  80% {
-    opacity: 0; }
-  100% {
-    opacity: 0; } }
-
 .callme {
   position: absolute;
   bottom: 60px;
@@ -172,7 +167,7 @@ header {
     border: none;
     border-radius: 12px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    transition: .4s ease;
+    transition: .25s ease;
     cursor: pointer; }
     .callme button:after {
       content: "";
@@ -186,6 +181,44 @@ header {
       transition: .4s ease;
       opacity: 0; }
     .callme button:hover {
-      top: -8px; }
+      top: -5px; }
       .callme button:hover:after {
         opacity: .3; }
+
+#offer {
+  min-height: 100vh;
+  background: #7AA2B2;
+  box-shadow: 0 0 600px rgba(53, 78, 92, 0.8) inset; }
+  #offer .topic-img-wrp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; }
+    #offer .topic-img-wrp .topic-img {
+      width: 200px; }
+  #offer .accordion-wrap {
+    padding: 80px 30px; }
+  #offer .card {
+    background: none;
+    color: #213644;
+    border: none; }
+    #offer .card .card-header {
+      padding: 0;
+      border: none; }
+      #offer .card .card-header button {
+        width: 100%;
+        margin-bottom: 2px;
+        color: #7AA2B2;
+        font-family: "Righteous", cursive;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: #345b75;
+        padding: 20px;
+        transition: .8s ease-out; }
+      #offer .card .card-header button[aria-expanded="true"] {
+        color: #FCC470; }
+    #offer .card .card-body {
+      padding: 20px 40px; }
+      #offer .card .card-body ul {
+        padding-left: 40px; }

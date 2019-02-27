@@ -4,6 +4,8 @@ $dark: #213644;
 $lighter: rgb(52, 91, 117);
 $lighten: #7AA2B2;
 
+$dark2lighter: linear-gradient($dark, $lighter) !important;
+
 //////// Text
 .yell-tx {
   color: $yell;
@@ -24,5 +26,5 @@ $lighten: #7AA2B2;
 
 //////// Gradients
 .dark-lite-blue {
-  background-image: linear-gradient($dark, $lighter) !important;
+  background-image: $dark2lighter;
 }
